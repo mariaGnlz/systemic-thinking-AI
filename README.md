@@ -1,6 +1,10 @@
 # systemic-thinking-AI
 This repository contains simulation files for a dynamic AI system that simulates model degradation, loss montorization and control. It features a balancing loop structure that activates a model re-trainings whenever model loss goes over 2. Loss increases steadily with every passing our, in response to the inference requests that it receives.
 
+This system has been created as an exploration of the application of systemic thinking to AI-enabled services, especially from an sustainability angle: Understading the environmental impact of AI-related services is notoriously difficult, not only because AI-services are complex pieces of software that interact with other software and human systems, but also because the concept of "environmental impact" itself is a collection of different factors with complex interactions of their own.
+
+For this first approach, we chose to model an illustrative use case of a company with a performance-focused objective of offering its users a competetive product, which we have simplified to "controlling performance degration as a result of data drift, so that the ML model's loss does not go over 2 nor lower than 1,8". With this systemic purpose, we attempt to capture the dynamic relationships that ML services engage with during their deployment, as well as the common scenario of a companie that tracks their energy consumption, but are ultimately focused on performance.
+
 The energy consumption and compute paremeters of this system are modeled after those of [BLOOM](https://arxiv.org/pdf/2211.02001), as appear on their [GitHub](https://huggingface.co/bigscience/bloom-intermediate) and [TensorBoard](https://huggingface.co/bigscience/tr11-176B-logs/tensorboard).
 
 ### Structure of the repository
