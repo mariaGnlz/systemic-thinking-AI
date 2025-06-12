@@ -5,16 +5,17 @@ The energy consumption and compute paremeters of this system are modeled after t
 
 ### Structure of the repository
 * simulation_files contains the Vensim model (in .mdl) that contains our system, along with the seven .vdfx files that contain the simulation data.
->* zeroDrift contains the simulation run with a *drift per request* of 0.
+>* zeroDrift contains the simulation run with a *drift per request* of 0, which we use as the system's baseline.
 >* 1e_07 contains the simulation run with a *drift per request* of 0,0000001
 >* 1e_06 contains the simulation run with a *drift per request* of 0,000001
 >* 1e_05 contains the simulation run with a *drift per request* of 0,00001
 >* 5e_05 contains the simulation run with a *drift per request* of 0,00005
 >* 1e_04 contains the simulation run with a *drift per request* of 0,0001
->* 5e_04 contains the simulation run with a *drift per request* of 0,0005
-* training_plots contains the plots of the values of different elements of the re-training structure
-* balancing_plots contains the plots of the values of different elements of the balancing loop
-* 
+>* 5e_04 contains the simulation run with a *drift per request* of 0,0005, which we think particularly interesting as it shows a scenario of systemic failure.
+
+* training_plots contains the plots related to re-training, in particular those showing the amount of GPUs over time and loss oscillations. All of them were sourced from the simulations in "simulation_files"
+* balancing_plots contains plots that show how the balancing activates and deactivates a re-training round. All of them were sourced from the simulations in "simulation_files"
+* energy_plots contains the plots related to the system's energy consumption. All of them were sourced from the simulations in "simulation_files"
 
 ## Architecture of the system
 The following figure shows the system, as implemented on Vensim:
